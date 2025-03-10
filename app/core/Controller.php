@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Core;
 
 class Controller
@@ -9,8 +8,8 @@ class Controller
     protected function autoLoadView()
     {
         $className = get_called_class();
-        $view = explode('\\', $className);
-        $handled = strtolower(str_replace('Controller', '', end($view)));
+        $handleName = explode('\\', $className);
+        $handled = strtolower(str_replace('Controller', '', end($handleName)));
 
         require_once "../app/views/$handled.view.php";
         $cssFile = $handled;
@@ -30,5 +29,10 @@ class Controller
     protected function setJS()
     {
  
+    }
+
+    protected function autoLoadModel()
+    {
+
     }
 }
