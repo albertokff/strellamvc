@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h2>Strella</h2>
-            <p>Empresa voltada para desenvolvimento web e marketing digital</p>
+            <p><?= $this->arrDados['banco']['title'] ?></p>
             <a href="">Saiba Mais!</a>
           </div>          
         </div>

@@ -1,11 +1,13 @@
 <?php
 
+namespace app\models;
+
 class HomeModel {
-    private $file = '../storage/database/home.json';
+    public $file = '../storage/database/home.json';
 
     public function getTitleAndSubtitleHome()
     {
-        if (!file_exists($file)) {
+        if (!file_exists($this->file)) {
             return [];
         }
 

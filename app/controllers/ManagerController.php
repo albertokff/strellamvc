@@ -8,7 +8,6 @@ class ManagerController extends Controller
 {
     public function Main()
     {
-        $this->setJS();
         $this->autoLoadView();
     }
 }

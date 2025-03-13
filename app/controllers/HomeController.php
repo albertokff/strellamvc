@@ -2,12 +2,23 @@
 
 namespace app\controllers;
 
-use app\core\Controller;
+use app\controllers\BaseController;
 
-class HomeController extends Controller
+class HomeController extends BaseController
 {
+    public $arrDados = [];
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     public function Main()
     {
-        $this->autoLoadView();
+        $this->arrDados = [
+            'banco' => $this->model->getTitleAndSubtitleHome()
+        ];
+
+        $this->loadView('home', $this->arrDados);
     }
 }
